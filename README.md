@@ -1,12 +1,10 @@
 -------------------MULTIPASS-------------------
 
 Step 1: sudo snap install multipass
-Step 2: multipass shell CK1;
-Step 3: multipass list; 
-Step 4: multipass start CK1
-Step 5: multipass stop CK1
-Step 6: multipass delete CK1
-Step 7: multipass help
+Step 2: multipass shell VirtualLinux
+Step 3: multipass list
+Step 4: multipass help
+Step 5: sudo apt-get install build-essential linux-headers-$(uname -r)
 
 -----------------------------------------------
 
