@@ -1,7 +1,7 @@
 -------------------MULTIPASS-------------------
 
 Step 1: sudo snap install multipass
-Step 2: multipass launch --name CK1; multipass shell;
+Step 2: multipass shell CK1;
 Step 3: multipass list; 
 Step 4: multipass start CK1
 Step 5: multipass stop CK1
