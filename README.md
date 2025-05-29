@@ -6,6 +6,10 @@ Step 3: multipass list
 Step 4: multipass help
 Step 5: sudo apt-get install build-essential linux-headers-$(uname -r)
 
+Step 6: cd CustomKernel; make; ls;
+Step 7: sudo insmod ck_gpio.ko; sudo lsmod; sudo dmesg;
+Step 8: sudo rmmod ck_gpio.ko; sudo lsmod; sudo dmesg -c;
+
 -----------------------------------------------
 
 # Linux Device Drivers Development
