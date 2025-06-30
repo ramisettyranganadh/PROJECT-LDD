@@ -18,6 +18,16 @@ Step 7: sudo insmod ck_gpio.ko; sudo lsmod; sudo dmesg;
 Step 8: sudo rmmod ck_gpio.ko; sudo lsmod; sudo dmesg -c;
 
 -----------------------------------------------
+How to Build Bootloader in QEMU:
+1. https://www.ctyme.com/rbrown.htm
+2. sudo apt update; sudo apt install nasm;
+3. nasm -V; sudo apt install qemu-system-x86;
+4. qemu-system-X86_64; mkdir PeachOS;
+5. cd PeachOS; vi boot.asm;
+6. nasm -f bin ./boot.asm -o ./boot.bin
+7. ndiasm ./boot.bin
+8. qemu-system-x86_64 -hda ./boot.bin
+-----------------------------------------------
 
 # Linux Device Drivers Development
 This is the code repository for [Linux Device Drivers Development](https://www.packtpub.com/networking-and-servers/linux-device-drivers-development?utm_source=github&utm_medium=repository&utm_campaign=9781785280009), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
