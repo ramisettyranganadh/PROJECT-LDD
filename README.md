@@ -1,4 +1,10 @@
 -------------------MULTIPASS-------------------
+How to recover on Linux :
+$ sudo snap stop multipass
+$ sudo killall multipass.gui
+$ sudo rm /var/snap/multipass/common/data/multipassd/authenticated-certs/multipass_client_certs.pem
+$ sudo cp ~/snap/multipass/current/data/multipass-client-certificate/multipass_cert.pem /var/snap/multipass/common/data/multipassd/authenticated-certs/multipass_client_certs.pem
+$ sudo snap start multipass
 
 Step 1: sudo snap install multipass
 Step 2: multipass shell VirtualLinux
