@@ -22,8 +22,8 @@ How to Build Bootloader in QEMU:
 1. https://www.ctyme.com/rbrown.htm
 2. sudo apt update; sudo apt install nasm;
 3. nasm -V; sudo apt install qemu-system-x86;
-4. qemu-system-X86_64; mkdir PeachOS;
-5. cd PeachOS; vi boot.asm;
+4. qemu-system-X86_64; mkdir RamiOS;
+5. cd RamiOS; vi boot.asm;
 6. nasm -f bin ./boot.asm -o ./boot.bin
 7. ndiasm ./boot.bin
 8. qemu-system-x86_64 -hda ./boot.bin
