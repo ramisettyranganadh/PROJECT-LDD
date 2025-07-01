@@ -14,9 +14,8 @@ start:
     mov bx,  0  
    ;bh for page number, bl for foreground color
     int 0x10 
-   ;int 0x10 is an interrupt to Display Characters on Terminal   
-    jmp $
-   ;jumps to itself, create infinite loop and control stays at that point
+   ;int 0x10 is an interrupt to Display Characters on Terminal   jmp $
+   ;jumps itself and don't allow to write boot signature
 
 times 510 - ($ - $$) db 0 
 ;Fill atleast 510 bytes with code and 0 to write boot signature in dw after that.
