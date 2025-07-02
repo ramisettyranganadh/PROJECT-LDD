@@ -1,11 +1,37 @@
 ;WELCOME to RAMIOS by RANGANADH for QEMU (Intel Machine)
 ;ctyme.com/intr - Refer for bios asm instructions and interrupts
-ORG 0x7C00 
-;BIOS loads at 0x7C00. This is the origin address of bootloader
+;wiki.osdev.org/FAT - Refer for bios parameter block
+
+ORG 0x00
+;BIOS starts at 0x00. This is the origin address of bootloader
 BITS 16 
 ;This is to define the bootloader is for 16 bit architecture
 
+_start:
+	jmp short start
+	nop
+
+times 33 db 0
+;
+ 
 start:  ;start is just a label to indicate whether the actual bootloader program starts from
+	jmp 0x7C0:step2
+
+step2:
+	cli
+	;clear interrupts
+	mov ax, 0x7C0
+	mov ds, ax
+	; data segment
+	mov es, ax
+	; extra segment
+	mov ax, 0x00
+	mov ss, ax
+	; stack segment
+	mov sp, 0x7C00
+	; stack pointer
+	sti
+	;enable interrupts
 	mov si, message
 	;load si with message 'Welcome to RamiOS!'
 	call print
