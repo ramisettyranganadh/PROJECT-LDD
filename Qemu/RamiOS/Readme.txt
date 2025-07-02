@@ -9,4 +9,5 @@ How to Build Bootloader in QEMU:
     nasm -f bin ./boot.asm -o ./boot.bin
     ndiasm ./boot.bin
     qemu-system-x86_64 -hda ./boot.bin
-
+    sudo fdisk -l
+	sudo if=./boot.bin of=/dev/sdb
